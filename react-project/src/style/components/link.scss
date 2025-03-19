@@ -1,0 +1,147 @@
+@use "../utils/typography" as mixins;
+@use "../utils/breakpoints" as *;
+
+.link-small {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    font-family: var(--main-font);
+    gap: 0.5rem;
+    cursor: pointer; 
+    color: var(--text-color); 
+    @include mixins.text-body-small-bold;
+
+    svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: var(--ultramarine-default-color);
+    }
+
+    &__text {
+        text-decoration: none;
+    }
+
+    @include from-mobile {
+        &:hover {
+            color: var(--ultramarine-default-color);
+            text-decoration: underline;
+        }
+    }
+
+    &:active {
+        color: var(--ultramarine-dark-color);
+        svg {
+            color: var(--ultramarine-dark-color);
+        }
+    }
+}
+
+.link {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    font-family: var(--main-font);
+    gap: 0.5rem;
+    cursor: pointer; 
+    color: var(--text-color); 
+    @include mixins.text-body;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--ultramarine-default-color);
+    }
+
+    &__text {
+        text-decoration: none;
+    }
+
+    @include from-mobile {
+        &:hover {
+            color: var(--ultramarine-default-color);
+            text-decoration: underline;
+        }
+    }
+
+    &:active {
+        color: var(--ultramarine-dark-color);
+        svg {
+            color: var(--ultramarine-dark-color);
+        }
+    }
+}
+
+.link-whitout-svg{
+    font-family: var(--main-font);
+    gap: 0.5rem;
+    cursor: pointer; 
+    color: var(--ultramarine-default-color); 
+    text-decoration: none;
+    @include mixins.text-body-small-bold;
+
+    @include from-mobile {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &:active {
+        color: var(--ultramarine-dark-color);
+        text-decoration: underline;
+    }
+}
+
+.link-whitout-svg-big{
+    font-family: var(--main-font);
+    gap: 0.5rem;
+    cursor: pointer; 
+    color: var(--ultramarine-default-color); 
+    text-decoration: none;
+    @include mixins.text-body;
+
+    @include from-mobile {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &:active {
+        color: var(--ultramarine-dark-color);
+        text-decoration: underline;
+    }
+}
+
+.link-vk{
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    font-family: var(--main-font);
+    gap: 0.75rem;
+    cursor: pointer; 
+    color: var(--text-color); 
+    @include mixins.text-body-small-bold;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--ultramarine-default-color);
+    }
+
+    &__text {
+        text-decoration: none;
+    }
+
+    @include from-mobile {
+        &:hover {
+            color: var(--ultramarine-default-color);
+
+        }
+    }
+
+    &:active {
+        color: var(--ultramarine-dark-color);
+        svg {
+            color: var(--ultramarine-dark-color);
+        }
+    }
+}

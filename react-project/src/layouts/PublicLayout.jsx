@@ -1,6 +1,5 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-
 const PublicLayout = () => {
   return (
     <div className="public-layout">
@@ -9,6 +8,7 @@ const PublicLayout = () => {
           <ul>
             <li><Link to="/">Главная</Link></li>
             <li><Link to="/login">Вход</Link></li>
+            <li><Link to="/uikit">UIKit</Link></li>
           </ul>
         </nav>
       </header>

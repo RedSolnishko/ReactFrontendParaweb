@@ -9,6 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "framer-motion": "^12.5.0",
+    "normalize.css": "^8.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
@@ -27,6 +29,7 @@
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
     "vite": "^6.2.0",
+    "vite-plugin-svgr": "^4.3.0",
     "vitest": "^3.0.8"
   }
 }

@@ -1,0 +1,55 @@
+@use "../utils/typography" as mixins;
+
+html {
+    --main-font: 'Onest', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+
+.text-h1 {
+    @include mixins.text-h1;
+}
+
+.text-h2 {
+    @include mixins.text-h2;
+}
+
+.text-h3 {
+    @include mixins.text-h3;
+}
+
+.text-h4 {
+    @include mixins.text-h4;
+}
+
+.text-accent {
+    @include mixins.text-accent;
+}
+
+.text-button {
+    @include mixins.text-button;
+
+}
+
+.text-tab {
+    @include mixins.text-tab;
+}
+
+.text-body {
+    @include mixins.text-body;
+}
+
+.text-body-bold {
+    @include mixins.text-body-bold;
+}
+
+.text-body-small {
+    @include mixins.text-body-small;
+}
+
+.text-body-small-bold {
+    @include mixins.text-body-small-bold;
+}
+
+.text-caption {
+    @include mixins.text-caption;
+}
