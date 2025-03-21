@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import './style/global/base.scss'
 import './style/main.scss';
 import './style/global/normalize.scss';
 import './style/global/reset.scss';
@@ -14,6 +15,7 @@ import './style/components/alert.scss'
 import './style/components/link.scss'
 import './style/components/file.scss'
 import './style/components/pagination.scss'
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
