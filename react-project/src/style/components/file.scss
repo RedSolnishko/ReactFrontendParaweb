@@ -23,7 +23,7 @@
     &__name {
         color: var(--ultramarine-default-color);
         text-decoration: none;
-        @include mixins.text-body-small;
+ 
     
         &.hovered {
             text-decoration: underline;
@@ -33,7 +33,7 @@
     &__details {
         font-size: 0.875rem;
         color: var(--text-secondary-promo-color);
-        @include mixins.text-caption;
+
     }
   }
   

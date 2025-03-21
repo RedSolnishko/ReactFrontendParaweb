@@ -21,7 +21,7 @@
         background: none;
         color: var(--text-color);
         font-family: var(--main-font);
-        @include mixins.text-body;
+
 
         svg{
             color: var(--text-secondary-promo-color);

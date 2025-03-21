@@ -11,7 +11,7 @@
     background-color: var(--card-color);
     color: var(--text--color);
     font-family: var(--main-font);
-    @include mixins.text-button; 
+
 
     @include mobile{
         width: 3rem;
@@ -39,8 +39,7 @@
     gap: 0.625rem;
     background-color: var(--gray-color3);
     color: var(--text-secondary-promo-color);
-    font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 2.5625rem;
@@ -69,7 +68,7 @@
     gap: 0.625rem;
     text-align: center;
     font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 5.4375rem;
@@ -89,7 +88,7 @@
     gap: 0.625rem;
     text-align: center;
     font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 3.25rem;
@@ -108,8 +107,7 @@
     color: var(--electric-green-default-color);
     gap: 0.625rem;
     text-align: center;
-    font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 3.25rem;
@@ -129,7 +127,7 @@
     gap: 0.625rem;
     text-align: center;
     font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 5.4375rem;
@@ -149,7 +147,7 @@
     gap: 0.625rem;
     text-align: center;
     font-family: var(--main-font);
-    @include mixins.text-body-small-bold; 
+
 
     @include mobile{
         width: 3.375rem;

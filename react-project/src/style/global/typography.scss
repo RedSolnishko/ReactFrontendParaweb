@@ -1,55 +1,45 @@
-@use "../utils/typography" as mixins;
+@use "../utils/typography" as *;
 
 html {
     --main-font: 'Onest', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
-
 .text-h1 {
-    @include mixins.text-h1;
+    @include text-h1;
 }
 
 .text-h2 {
-    @include mixins.text-h2;
+    @include text-h2;
 }
 
 .text-h3 {
-    @include mixins.text-h3;
+    @include text-h3;
 }
 
 .text-h4 {
-    @include mixins.text-h4;
-}
-
-.text-accent {
-    @include mixins.text-accent;
+    @include text-h4;
 }
 
 .text-button {
-    @include mixins.text-button;
-
-}
-
-.text-tab {
-    @include mixins.text-tab;
+    @include text-button;
 }
 
 .text-body {
-    @include mixins.text-body;
+    @include text-body;
 }
 
 .text-body-bold {
-    @include mixins.text-body-bold;
+    @include text-body-bold;
 }
 
 .text-body-small {
-    @include mixins.text-body-small;
+    @include text-body-small;
 }
 
 .text-body-small-bold {
-    @include mixins.text-body-small-bold;
+    @include text-body-small-bold;
 }
 
-.text-caption {
-    @include mixins.text-caption;
+.caption {
+    @include caption;
 }

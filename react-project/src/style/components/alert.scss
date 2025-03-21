@@ -8,7 +8,7 @@
     background-color: white;
     color: var(--text-color);
     font-family: var(--main-font);
-    @include mixins.text-body-small-bold;
+
     
     @include mobile {
         width: 21.9375rem;
