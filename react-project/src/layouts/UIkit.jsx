@@ -1,14 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 
-
-import AlertSuccess from '../components/alert/AlertSuccess';
-import AlertError from '../components/alert/AlertError';
-
-import LinkSmall from '../components/link/LinkSmall';
-import LinkBig from '../components/link/Link';
-import LinkVk from '../components/link/LinkVk';
-import File from '../components/File/File';
 import PaginationMenu from '../components/pagination/Pagination';
 import PaginationIcon from "../assets/svg/pagination/chevron-left.svg?react";
 
@@ -16,7 +8,10 @@ import Button from '../components/button/Button';
 import ButtonEdit from '../components/button/ButtonEdit';
 import ButtonShare from '../components/button/ButtonShare';
 import ButtonUser from '../components/button/ButtonUser';
-
+import LinkP from '../components/link/LinkP';
+import Alert from '../components/alert/Alert';
+import Tag from '../components/tag/Tag';
+import Tab from '../components/tab/Tab';
 
 const UIkit = () => {
   return (
@@ -85,9 +80,10 @@ const UIkit = () => {
             </ButtonUser>
           </li>
           
+        
         </ul>
-
-            <ul>
+        
+        <ul className='ButtonEdit' >
                 <h2 className='text-h2'> ButtonEdit</h2>
             <li>
           <ButtonEdit 
@@ -125,42 +121,85 @@ const UIkit = () => {
             >
             </ButtonEdit>
           </li>
-            </ul>
+        </ul>
 
         <ul className='Links'>
-          <h1>Links</h1>
-          <li><LinkSmall /></li>
-          <li><LinkBig /></li>
-          <li> <a className='link-whitout-svg' href='#'>Link</a></li>
-          <li> <a className='link-whitout-svg-big' href='#'>Link</a></li>
-          <li><LinkVk /></li>
+              <h2 className='text-h2'>Links</h2>
+              <li><LinkP variant="default" href="#">Link</LinkP></li>
+              <li><LinkP variant="default-small" href="#">Link</LinkP></li>
+              <li><LinkP variant="icon" href="#">Link</LinkP></li>
+              <li><LinkP variant="icon-small" href="#">Link</LinkP></li>
+              <li><LinkP variant="vk" href="#">Link</LinkP></li>
         </ul>
 
-        <ul>
-          <li><File /></li>
+        <ul className='Tags'>
+        <h2 className='text-h2'>Tags</h2>
+          <li> <Tag variant="default">Tag</Tag></li>
+          <li><Tag variant="education" href="#">Воспитание</Tag></li>
+          <li><Tag variant="study" href="#">Учёба</Tag></li>
+          <li><Tag variant="scince" href="#">Наука</Tag></li>
+          <li><Tag variant="creation" href="#">Творчество</Tag></li>
+          <li><Tag variant="sport" href="#">Спорт</Tag></li>
         </ul>
 
-        <ul>
-          <li><button  className='educational-materials'>Tag</button></li>
-          <li><button  className='event'>Tag </button></li>
-          <li><button  className='education'>Воспитание</button></li>
-          <li><button  className='study'>Учеба</button></li>
-          <li><button  className='scince'>Наука</button></li>
-          <li><button  className='creation'>Творчество</button></li>
-          <li><button  className='sport'>Спорт</button></li>
+        <ul className='Alerts'>
+          <h2 className='text-h2'>Alerts</h2>
+          <li>
+            <Alert
+              type='success'
+              title='Успешно'
+              message='Вы участвуете в мероприятии'
+              onClose={() => setShowSuccess(false)}
+            />
+          </li>
+
+          <li>
+            <Alert
+              type='error'
+              title='Ошибка'
+              message='Пожалуйста, попробуйте еще раз'
+              onClose={() => setShowSuccess(false)}
+            />
+          </li>
         </ul>
 
-        <ul>
+        <ul className='Tab'>
+          <h2 className='text-h2'>Tab</h2>
+          <li> <Tab label="Home" badge={109} /> </li>
+          <li>  <Tab label="Messages" badge={7} /></li>
+        </ul>
+
+        <ul className='Pagination'>
+          <h2 className='text-h2'>Pagination</h2>
           <li><button  className='pagination__button'>1</button></li>
           <li><button  className='pagination__button'><PaginationIcon /></button></li>
           <li><PaginationMenu /></li>
         </ul>
 
-        <button className='tab'>Tab</button>
+        <ul className='CheckRadio'>
+          <h2 className='text-h2'>CheckRadio</h2>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__box"></span>
+            </label>
+          </li>
+          <li>
+            <label class="radio">
+              <input type="radio" name="group1" class="radio__input"  />
+                <span class="radio__circle"></span>
+            </label>  
+          </li>
+        </ul>
 
-        <ul className='Alerts'>
-          <li><AlertSuccess /></li>
-          <li><AlertError /></li>
+        <ul>
+          <h2 className='text-h2'>Toggle</h2>
+          <li>
+          <label class="toggle">
+              <input type="checkbox" class="toggle__input"  />
+              <span class="toggle__slider"></span>
+          </label>
+          </li>
         </ul>
       </main>
     </div>

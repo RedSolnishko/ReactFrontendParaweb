@@ -1,62 +1,68 @@
-@use "../utils/typography" as mixins;
+@use "../utils/typography" as *;
 @use "../utils/breakpoints" as *;
 
 .alert {
-    width: 27.5rem;
-    height: 4.5rem;
-    border-radius: 1.5rem;
-    background-color: white;
+    display: flex;
+    width: 44rem;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    border: 1px solid;
+    position: relative;
     color: var(--text-color);
     font-family: var(--main-font);
 
-    
-    @include mobile {
-        width: 21.9375rem;
-        height: 3.75rem;
+    @include mobile{
+        width: 35.1rem;
+        padding: 2rem;
+        border-radius: 2rem;
     }
 
-    &__content {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 24px;
-        position: relative;
 
-        @include mobile {
-            padding: 0 20px;
-        }
-    }
-    
-    &__icon {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-        
-        &:first-child {
-            margin-right: 12px;
-        }
-
-        @include mobile {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-        
-            &:first-child {
-                margin-right: 8px;
-            }
-        }
-    }
-    
-    &__text {
-        flex-grow: 1;
-        text-align: left;
-    }
-    
     &--success {
-        border: 1px solid var(--electric-green-default-color);
+      border-color: var(--electric-green-default-color);
+      background: var(--card-color);
     }
-    
+  
     &--error {
-        border: 1px solid var(--suai-red-default-color);
+      border-color: var(--suai-red-default-color);
+      background: var(--card-color);
+
     }
-}
+  
+    &__icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.6rem;
+
+      @include mobile{
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1.2rem;
+        }
+    }
+  
+    &__content {
+      flex: 1;
+    }
+  
+    &__title {
+      font-weight: bold;
+      display: block;
+      @include text-body-small-bold;
+    }
+  
+    &__message {
+        color: var(--text-secondary-color);
+        @include text-body-small;
+    }
+  
+    &__close {
+        width: 2rem;
+        height: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+    }
+  }
+  

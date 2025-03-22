@@ -12,34 +12,38 @@ html {
     @include text-h2;
 }
 
-text-h3 {
+.text-h3 {
     @include text-h3;
 }
 
-text-h4 {
+.text-h4 {
     @include text-h4;
 }
 
-text-button {
+.text-button {
     @include text-button;
 }
 
-text-body {
+.text-body {
     @include text-body;
 }
 
-text-body-bold {
+.text-body-bold {
     @include text-body-bold;
 }
 
-text-body-small {
+.text-body-small {
     @include text-body-small;
 }
 
-text-body-small-bold {
+.text-body-small-bold {
     @include text-body-small-bold;
 }
 
-caption {
-    @include caption;
+.text-caption {
+    @include text-caption;
+}
+
+.text-tag {
+    @include text-tag;
 }

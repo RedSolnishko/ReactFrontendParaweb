@@ -1,147 +1,94 @@
-@use "../utils/typography" as mixins;
+@use "../utils/typography" as *;
 @use "../utils/breakpoints" as *;
 
-.link-small {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start;
-    font-family: var(--main-font);
-    gap: 0.5rem;
-    cursor: pointer; 
-    color: var(--text-color); 
-
-
-    svg {
-        width: 1.25rem;
-        height: 1.25rem;
-        color: var(--ultramarine-default-color);
-    }
-
-    &__text {
-        text-decoration: none;
-    }
-
-    @include from-mobile {
-        &:hover {
-            color: var(--ultramarine-default-color);
-            text-decoration: underline;
-        }
-    }
-
-    &:active {
-        color: var(--ultramarine-dark-color);
-        svg {
-            color: var(--ultramarine-dark-color);
-        }
-    }
-}
-
 .link {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start;
-    font-family: var(--main-font);
-    gap: 0.5rem;
-    cursor: pointer; 
-    color: var(--text-color); 
-
-
-    svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        color: var(--ultramarine-default-color);
-    }
-
-    &__text {
-        text-decoration: none;
-    }
-
-    @include from-mobile {
-        &:hover {
-            color: var(--ultramarine-default-color);
-            text-decoration: underline;
-        }
-    }
-
-    &:active {
-        color: var(--ultramarine-dark-color);
-        svg {
-            color: var(--ultramarine-dark-color);
-        }
-    }
-}
-
-.link-whitout-svg{
-    font-family: var(--main-font);
-    gap: 0.5rem;
-    cursor: pointer; 
-    color: var(--ultramarine-default-color); 
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-
-
-    @include from-mobile {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    &:active {
-        color: var(--ultramarine-dark-color);
-        text-decoration: underline;
-    }
-}
-
-.link-whitout-svg-big{
     font-family: var(--main-font);
-    gap: 0.5rem;
-    cursor: pointer; 
-    color: var(--ultramarine-default-color); 
-    text-decoration: none;
-
-
-    @include from-mobile {
-        &:hover {
-            text-decoration: underline;
-        }
+  
+    &.link--default {
+      text-decoration: underline;
+      color: var(--ultramarine-default-color);
+      @include text-body;
     }
-
-    &:active {
-        color: var(--ultramarine-dark-color);
-        text-decoration: underline;
+  
+    &.link--default-small {
+      text-decoration: underline;
+      color: var(--ultramarine-default-color);
+      @include text-body-small;
     }
-}
+  
+    &.link--icon {
+      color: var(--text-color);
+      gap: 0.8rem;
+      @include text-body;
 
-.link-vk{
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start;
-    font-family: var(--main-font);
-    gap: 0.75rem;
-    cursor: pointer; 
-    color: var(--text-color); 
-
-
-    svg {
-        width: 1.5rem;
-        height: 1.5rem;
+      svg{
+        width: 2.4rem;
+        height: 2.4rem;
         color: var(--ultramarine-default-color);
-    }
+      }
 
-    &__text {
-        text-decoration: none;
-    }
+ 
 
-    @include from-mobile {
-        &:hover {
-            color: var(--ultramarine-default-color);
-
+      @include from-mobile{
+        &:hover{
+          color: var(--ultramarine-default-color);
+          text-decoration: underline;
         }
-    }
+      }
 
-    &:active {
-        color: var(--ultramarine-dark-color);
-        svg {
-            color: var(--ultramarine-dark-color);
-        }
+      &:active{
+          color: var(--ultramarine-default-color);
+          text-decoration: underline;
+      }
     }
-}
+  
+    &.link--icon-small {
+      color: var(--text-color);
+      gap: 0.8rem;
+      @include text-body-small;
+
+      svg{
+        width: 2rem;
+        height: 2rem;
+        color: var(--ultramarine-default-color);
+      }
+
+      @include from-mobile{
+        &:hover{
+          color: var(--ultramarine-default-color);
+          text-decoration: underline;
+        }
+      }
+
+      &:active{
+        color: var(--ultramarine-default-color);
+        text-decoration: underline;
+      }
+    }
+  
+    &.link--vk {
+      background: transparent;
+      color: var(--text-color);
+      gap: 1.2rem;
+      @include text-body-small;
+  
+      .vk-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      @include from-mobile{
+        &:hover{
+          color: var(--ultramarine-default-color);
+        }
+      }
+
+      &:active{
+        color: var(--ultramarine-default-color);
+      }
+    }
+  }
+  
