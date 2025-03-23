@@ -8,13 +8,11 @@
     cursor: pointer;
 }
 
-// ** Стили для чекбоксов **
 .checkbox__input {
     position: absolute;
     width: 0;
     height: 0;
     opacity: 0;
-    
 
     & + .checkbox__box {
         display: flex;
@@ -25,34 +23,24 @@
         border: 1px solid var(--border-color);
         border-radius: 0.6rem;
 
-        @include mobile{
+        @include mobile {
             width: 1.6rem;
             height: 1.6rem;
-        }
-    }
-
-    @include from-mobile{
-        &:hover + .checkbox__box {
-            border-color: var(--ultramarine-dark-color);
         }
     }
 
     &:checked + .checkbox__box {
         background-color: var(--ultramarine-default-color);
         border-color: var(--ultramarine-default-color);
-        position: relative;
-        
-       @include from-mobile{
-        &:hover {
-            background-color: var(--ultramarine-dark-color);
-            border-color: var(--ultramarine-dark-color);
-        }
-       }
 
+        // Исправлено отображение галочки через маску
         &::after {
-            content: url(../../assets/svg/check.svg);
-            color: var(--text-contrast-color);
-          
+            content: "";
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            mask: url(../../assets/svg/check.svg) no-repeat center;
+            background-color: white;
         }
     }
 
@@ -61,6 +49,7 @@
         border-color: var(--border-color);
         pointer-events: none;
         &::after {
+            content: url(../../assets/svg/check-disabled.svg);
             color: var(--border-color);
         }
     }

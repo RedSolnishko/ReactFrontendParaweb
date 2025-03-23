@@ -18,7 +18,8 @@ import './style/components/link.scss'
 import './style/components/pagination.scss'
 import './style/components/checkboxradio.scss'
 import './style/components/toggle.scss'
-
+import './style/components/dropdown.scss'
+import './style/components/breadcrumbs.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

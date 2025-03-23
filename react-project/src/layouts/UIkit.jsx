@@ -12,6 +12,30 @@ import LinkP from '../components/link/LinkP';
 import Alert from '../components/alert/Alert';
 import Tag from '../components/tag/Tag';
 import Tab from '../components/tab/Tab';
+import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs'; // Импорт Breadcrumbs
+
+import Dropdown from '../components/dropdown/DropDown';
+import VkIcon from '../assets/svg/vk.svg?react';
+import Telergram from '../assets/svg/telegram.svg?react';
+import LinkIcon  from  '../assets/svg/socials.svg?react';
+
+const text = [
+  { id: 1, label: "Вариант 1" },
+  { id: 2, label: "Вариант 2" },
+  { id: 3, label: "Вариант 3" },
+];
+
+const check = [
+  { id: 1, label: "Вариант 1", checked: false},
+  { id: 2, label: "Вариант 2", checked: false},
+  { id: 3, label: "Вариант 3", checked: false},
+];
+
+const icon = [
+  { id: 1, label: "VK", icon: <VkIcon />},
+  { id: 2, label: "Telergram", icon: <Telergram />},
+  { id: 3, label: "Скопировать ссылку", icon: <LinkIcon /> },
+];
 
 const UIkit = () => {
   return (
@@ -79,43 +103,40 @@ const UIkit = () => {
             >
             </ButtonUser>
           </li>
-          
-        
         </ul>
         
         <ul className='ButtonEdit' >
-                <h2 className='text-h2'> ButtonEdit</h2>
-            <li>
-          <ButtonEdit 
+          <h2 className='text-h2'> ButtonEdit</h2>
+          <li>
+            <ButtonEdit 
               variant="littlebg" 
               onClick={() => alert('default Button clicked!')}
             >
             </ButtonEdit>
           </li>
           <li>
-          <ButtonEdit 
+            <ButtonEdit 
               variant="little" 
               onClick={() => alert('default Button clicked!')}
             >
             </ButtonEdit>
           </li>
-
           <li>
-          <ButtonEdit 
+            <ButtonEdit 
               variant="light" 
               onClick={() => alert('default Button clicked!')}
             >
             </ButtonEdit>
           </li>
           <li>
-          <ButtonEdit 
+            <ButtonEdit 
               variant="contrast" 
               onClick={() => alert('default Button clicked!')}
             >
             </ButtonEdit>
           </li>
           <li>
-          <ButtonEdit 
+            <ButtonEdit 
               variant="default" 
               onClick={() => alert('default Button clicked!')}
             >
@@ -124,16 +145,16 @@ const UIkit = () => {
         </ul>
 
         <ul className='Links'>
-              <h2 className='text-h2'>Links</h2>
-              <li><LinkP variant="default" href="#">Link</LinkP></li>
-              <li><LinkP variant="default-small" href="#">Link</LinkP></li>
-              <li><LinkP variant="icon" href="#">Link</LinkP></li>
-              <li><LinkP variant="icon-small" href="#">Link</LinkP></li>
-              <li><LinkP variant="vk" href="#">Link</LinkP></li>
+          <h2 className='text-h2'>Links</h2>
+          <li><LinkP variant="default" href="#">Link</LinkP></li>
+          <li><LinkP variant="default-small" href="#">Link</LinkP></li>
+          <li><LinkP variant="icon" href="#">Link</LinkP></li>
+          <li><LinkP variant="icon-small" href="#">Link</LinkP></li>
+          <li><LinkP variant="vk" href="#">Link</LinkP></li>
         </ul>
 
         <ul className='Tags'>
-        <h2 className='text-h2'>Tags</h2>
+          <h2 className='text-h2'>Tags</h2>
           <li> <Tag variant="default">Tag</Tag></li>
           <li><Tag variant="education" href="#">Воспитание</Tag></li>
           <li><Tag variant="study" href="#">Учёба</Tag></li>
@@ -152,7 +173,6 @@ const UIkit = () => {
               onClose={() => setShowSuccess(false)}
             />
           </li>
-
           <li>
             <Alert
               type='error'
@@ -180,7 +200,7 @@ const UIkit = () => {
           <h2 className='text-h2'>CheckRadio</h2>
           <li>
             <label class="checkbox">
-              <input type="checkbox" class="checkbox__input" />
+              <input type="checkbox" class="checkbox__input"/>
               <span class="checkbox__box"></span>
             </label>
           </li>
@@ -195,10 +215,34 @@ const UIkit = () => {
         <ul>
           <h2 className='text-h2'>Toggle</h2>
           <li>
-          <label class="toggle">
+            <label class="toggle">
               <input type="checkbox" class="toggle__input"  />
               <span class="toggle__slider"></span>
-          </label>
+            </label>
+          </li>
+        </ul>
+
+        <ul className='Dropdown'>
+          <h2 className='text-h2'>Dropdown</h2>
+          <li> <Dropdown type="text" options={text} /> </li>
+          <li> <Dropdown type="checkbox" options={check} /> </li>
+          <li> <Dropdown type="icon" options={icon} /></li>
+        </ul>
+
+        <ul className='Breadcrumbs'>
+          <h2 className='text-h2'>Breadcrumbs</h2>
+          <li>
+          <Breadcrumbs 
+            items={[
+              { label: "Главная", path: "/" },
+              { label: "Мероприятия", path: "/events" },
+              { 
+                label: "VII Открытый отборочный чемпионат...", 
+                path: "/events/championship" 
+              }
+            ]}
+            disabledItems={[2]} // Индекс последнего элемента (необязательно)
+              />
           </li>
         </ul>
       </main>

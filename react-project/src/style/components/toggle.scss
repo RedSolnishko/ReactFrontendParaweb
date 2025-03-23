@@ -7,7 +7,7 @@
     cursor: pointer;
     width: 4.6rem;
     height: 2.4rem;
-    
+
     &__input {
         position: absolute;
         width: 0;
@@ -44,19 +44,18 @@
                 width: 2rem;
                 height: 2rem;
                 background-image: url("../../assets/svg/check.svg"); // Указываем путь к SVG
-                color: green;
                 background-size: contain;
                 background-repeat: no-repeat;
                 opacity: 0;
                 transition: opacity 0.2s ease-in-out;
             }
+       
         }
 
-        @include from-mobile{
-
+        @include from-mobile {
             &:hover + .toggle__slider {
                 border-color: var(--ultramarine-default-color);
-    
+
                 &::before {
                     background: var(--ultramarine-default-color);
                 }
@@ -81,28 +80,31 @@
             }
 
             &::after {
-                opacity: 1;
+                opacity: 1; // Показываем иконку при активном состоянии
+               
             }
 
-            &:hover {
-                border-color: var(--ultramarine-dark-color);
-                background-color: var(--ultramarine-dark-color);
+            @include from-mobile{
+                &:hover {
+                    border-color: var(--ultramarine-dark-color);
+                    background-color: var(--ultramarine-dark-color);
+                }
             }
         }
 
         // Disabled (неактивное состояние)
         &:disabled + .toggle__slider {
             background-color: var(--gray-color2);
-            border-color: var(--gray-color2);;
+            border-color: var(--gray-color2);
             pointer-events: none;
 
             &::before {
                 background: var(--text-blind-color);
             }
 
-            &::after {
-                opacity: 0.5;
-                
+            &::after{
+                opacity: 1; // Показываем иконку в состоянии disabled
+                background-image: url(../../assets/svg/check-disabled.svg);
             }
         }
     }
