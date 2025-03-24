@@ -12,12 +12,16 @@ import LinkP from '../components/link/LinkP';
 import Alert from '../components/alert/Alert';
 import Tag from '../components/tag/Tag';
 import Tab from '../components/tab/Tab';
-import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs'; // Импорт Breadcrumbs
-
+import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs'; 
 import Dropdown from '../components/dropdown/DropDown';
+import Switcher from '../components/switcher/Switcher';
+import ImagePlaceholder from '../components/image-placeholder/ImagePlaceholder';
+
 import VkIcon from '../assets/svg/vk.svg?react';
 import Telergram from '../assets/svg/telegram.svg?react';
 import LinkIcon  from  '../assets/svg/socials.svg?react';
+
+import EventCard from '../components/card/EventCard';
 
 const text = [
   { id: 1, label: "Вариант 1" },
@@ -244,6 +248,42 @@ const UIkit = () => {
             disabledItems={[2]} // Индекс последнего элемента (необязательно)
               />
           </li>
+        </ul>
+
+        <ul className='Switcher'>
+          <h2 className='text-h2'>Switcher</h2>
+          <li>
+              <Switcher/>
+          </li>
+        </ul>
+
+        <ul className='ImagePlaceholder'>
+          <h2 className='text-h2'>ImagePlaceholder</h2>
+          <li><ImagePlaceholder variant="rating-card" img="src\assets\pics\pelmeni.jpg"/></li>
+          <li> <ImagePlaceholder variant="profile"/> </li>
+          <li> <ImagePlaceholder variant="menu"/> </li>
+          <li> <ImagePlaceholder variant="rating-list"/> </li>
+
+        </ul>
+
+        <ul className='Card'>
+          <h2 className='text-h2'>EventCard</h2>
+          <li>
+            <EventCard
+              title="Название мероприятия"
+              date="30 ноя"
+              time="12:00 - 17:00"
+              location="ГУАП, Ленсовета 14, актовый зал"
+              attendees={500}
+              timeUntil="Через 2 часа"
+              timeUntilVariant="soon" // Событие скоро — красный текст
+              image="src/assets/pics/pic1.jpg"
+              category="Творчество"
+              categoryVariant="creation"
+              rating={100}
+            />
+          </li>
+
         </ul>
       </main>
     </div>

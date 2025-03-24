@@ -20,6 +20,9 @@ import './style/components/checkboxradio.scss'
 import './style/components/toggle.scss'
 import './style/components/dropdown.scss'
 import './style/components/breadcrumbs.scss'
+import './style/components/switcher.scss'
+import './style/components/image-placeholder.scss'
+import './style/components/eventcard.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
