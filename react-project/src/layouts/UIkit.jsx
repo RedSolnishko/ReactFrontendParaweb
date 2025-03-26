@@ -22,6 +22,11 @@ import Telergram from '../assets/svg/telegram.svg?react';
 import LinkIcon  from  '../assets/svg/socials.svg?react';
 
 import EventCard from '../components/card/EventCard';
+import CommunityCard from '../components/card/CommunityCard';
+import DocumentCard from '../components/card/DocumentCard';
+import ProductCard from '../components/card/ProductCard';
+import PartnerCard from '../components/card/PartnerCard';
+import LevelCard from '../components/card/levelCard';
 
 const text = [
   { id: 1, label: "Вариант 1" },
@@ -241,7 +246,7 @@ const UIkit = () => {
               { label: "Главная", path: "/" },
               { label: "Мероприятия", path: "/events" },
               { 
-                label: "VII Открытый отборочный чемпионат...", 
+                label: "VII Открытый отборочный чемпионат ФГАОУ ВО ГУАП по стандартам Агентства развития профессий и навыков", 
                 path: "/events/championship" 
               }
             ]}
@@ -283,7 +288,55 @@ const UIkit = () => {
               rating={100}
             />
           </li>
+          
+          <li>
+            <CommunityCard
+              title="Название сообщества"
+              category="Творчество"
+              categoryVariant="creation"
+              image="src/assets/pics/pic2.jpg"
+              profileImage="src/assets/pics/pelmeni.jpg" // Передаём изображение для аватара
+              responsible="Константинопольский Константин Константинович"
+              responsibleRole="Ответственный"
+            />
+          </li>
 
+          <li>
+            <DocumentCard 
+              title="Headline"
+              fileType="PDF"
+              fileSize="99.9 KB"
+              onDownload={() => alert("Скачивание файла")}
+            />
+          </li>
+
+          <li>
+            <ProductCard
+              image="src\assets\pics\prize.jpg"
+              price={100}
+              title="Наименование приза"
+              onClaim={() => alert("Приз получен!")}
+            />
+          </li>
+
+          <li>
+          <PartnerCard
+            logo="src\assets\pics\prize.jpg"
+            name="Название партнёра"
+            link="https://link.ru"
+            contact="Константинопольский Константин Константинович"
+            phone="+7 (812) 710-64-82"
+            email="wsr@guap.ru"
+            socials={{
+              vk: "#",
+              telegram: "#"
+            }}
+          />
+          </li>
+
+          <li>
+          <LevelCard name="Уровень 1" icon="src\assets\pics\image.svg" completed={true} cost={100} />
+          </li>
         </ul>
       </main>
     </div>

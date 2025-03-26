@@ -22,7 +22,13 @@ import './style/components/dropdown.scss'
 import './style/components/breadcrumbs.scss'
 import './style/components/switcher.scss'
 import './style/components/image-placeholder.scss'
-import './style/components/eventcard.scss'
+
+import './style/components/event-card.scss'
+import './style/components/community-card.scss'
+import './style/components/document-card.scss'
+import './style/components/product-card.scss'
+import './style/components/partner-card.scss'
+import './style/components/level-card.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -31,3 +37,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+

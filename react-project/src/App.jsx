@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import PrivateLayout from './layouts/PrivateLayout';
 import NotFound from './layouts/NotFound';
-import UIkit from './layouts/UIkit'; // Исправленный импорт
+import UIkit from './layouts/UIkit'; 
 
 // Демонстрационные компоненты страниц
 const HomePage = () => <div>Главная страница</div>;
