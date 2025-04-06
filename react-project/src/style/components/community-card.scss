@@ -10,9 +10,7 @@
   background-color: var(--card-color);
   padding: 0.8rem;
   gap: 2rem;
-  font-family: var(--main-font);
-
-    
+  
     @include mobile{
         width: 35.1rem;
         border-radius: 2.4rem;
@@ -41,6 +39,19 @@
     }
   }
 
+  &__bookmark-button {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+  
+  &__tags{
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+    
   &__tag-wrapper {
     display: flex;
     width: max-content; // Контейнер займёт только необходимую ширину
@@ -53,12 +64,12 @@
     margin-bottom: 1.2rem;
     @include from-mobile{
         &:hover {
-            color: var(--ultramarine-default-color);
+          color: var(--ultramarine-default-color);
         }
     }
 
     @include mobile{
-        margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
     }
   }
 
@@ -69,16 +80,16 @@
     border-top: 1px solid var(--border-color);
 
     @include mobile{
-        gap: 1.2rem;
-        padding-top: 1.6rem;
+      gap: 1.2rem;
+      padding-top: 1.6rem;
     }
   }
 
   &__avatar {
     @include mobile{
-        width: 3.2rem;
-        height: 3.2rem;
-        border-radius: 1.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 1.2rem;
     }
   }
 
@@ -86,7 +97,6 @@
     color: var(--text-primary-color);
     margin-bottom: 0.8rem;
     @include text-body-small;
-    
   }
 
   &__role {

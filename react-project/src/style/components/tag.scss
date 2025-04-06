@@ -8,11 +8,9 @@
     padding: 4px 0.8rem;
     border-radius: 0.8rem;
     text-decoration: none; 
-    font-family: var(--main-font);
     cursor: pointer;
     @include text-tag;
   
-
     &--default {
       color: var(--text-secondary-color);
       background-color: var(--gray-color3);
@@ -28,30 +26,29 @@
       }
     }
   
-    &--education {
+    &--cyan {
       color: var(--cyan-default-color);
       background-color: var(--cyan-light-color); 
     }
   
-    &--study {
+    &--purple {
       color: var(--purple-default-color);
       background-color: var( --purple-light-color); 
     }
   
-    &--scince {
+    &--green {
       color: var(--electric-green-default-color);
-      background-color: var(--electric-green-light-color-2); 
+      background-color: var(--electric-green-light-color2); 
     }
   
-    &--creation {
-      color: var(--suai-red-light-color-1);
-      background-color: var(--suai-red-light-color-2); 
+    &--red {
+      color: var(--suai-red-light-color1);
+      background-color: var(--suai-red-light-color2); 
     }
   
-    &--sport {
+    &--blue {
       color: var( --suai-blue-default-color);
       background-color: var(--suai-blue-light-color); 
     }
-  
-  }
+}
   

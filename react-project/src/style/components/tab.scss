@@ -2,7 +2,7 @@
 @use "../utils/breakpoints" as *;
 
 .tab {
-    position: relative; // Добавляем относительное позиционирование для контейнера
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: space-around; 
@@ -13,7 +13,6 @@
     border: none;
     cursor: pointer;
     color: var(--text-secondary-color);
-    font-family: var(--main-font);
     @include text-button;
 
     @include mobile{
@@ -54,7 +53,7 @@
             left: 0;
             right: 0;
             bottom: 8px;
-            height: 1px; // Толщина линии
+            height: 1px; 
             background: var(--ultramarine-default-color); 
         }
     }

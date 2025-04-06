@@ -1,7 +1,6 @@
 @use "../utils/typography" as mixins;
 @use "../utils/breakpoints" as *;
 
-
 .pagination{
     display: flex; 
     align-items: center; 

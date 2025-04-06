@@ -1,5 +1,6 @@
 import React from "react";
 import CoinIcon from "../../assets/svg/coin.svg?react";
+import Button from "../button/Button";
 
 /**
  * Компонент карточки продукта
@@ -30,9 +31,11 @@ const ProductCard = ({ image, price, title, onClaim }) => {
         {/* Обертка для кнопки "Получить" */}
         <div className="product-card__button-wrapper">
           {/* Кнопка, при клике на которую выполняется переданная функция onClaim */}
-          <button className="product-card__button" onClick={onClaim}>
-            Получить
-          </button>
+          <Button
+          variant="primary" >
+          Получить
+          </Button>
+      
         </div>
       </div>
     </div>

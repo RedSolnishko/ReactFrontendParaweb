@@ -4,7 +4,6 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    font-family: var(--main-font);
 
     &__toggle {
         background-color: #f0f0f0;
@@ -35,35 +34,38 @@
     }
 
     &__item {
-        // Общий padding для checkbox и text
-        &:not(.dropdown__item--icon) {
-            padding: 0.8rem 1.2rem;
-        }
-
         color: var(--text-color);
         cursor: pointer;
+        padding: 0.8rem 1.2rem;
 
-        // Общий ховер для текста и чекбоксов
-        &:hover:not(.dropdown__item--icon) {
-            background-color: var(--gray-color2);
-            border-radius: 0.8rem;
+        @include from-mobile{
+            &:hover {
+                background-color: var(--gray-color2);
+                border-radius: 0.8rem;
+            }
+        }
+
+        &:active {
+            color: var(--ultramarine-default-color);
         }
     }
 
     // Стили для элементов с иконками
     &__item--icon {
-        padding: 0; // Убираем внешний padding
+        padding: 0;
 
         .dropdown__icon {
             display: inline-flex;
             align-items: center;
             gap: 1.2rem;
-            padding: 0.8rem 1.2rem; // Переносим padding внутрь
+            padding: 0.8rem 1.2rem;
             border-radius: 8px;
 
-            &:hover {
-              border-radius: 1.2rem;
-              background-color: var(--gray-color2);
+            @include from-mobile{
+                &:hover {
+                    border-radius: 1.2rem;
+                    background-color: var(--gray-color2);
+                  }
             }
 
             svg {
@@ -77,10 +79,15 @@
             }
         }
     }
-}
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
+    // Для чекбоксов убираем изменение цвета текста при нажатии
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        &:active {
+            color: var(--text-color);
+        }
+    }
 }

@@ -5,7 +5,6 @@
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    font-family: var(--main-font);
   
     &.link--default {
       text-decoration: underline;
@@ -69,13 +68,13 @@
       }
     }
   
-    &.link--vk {
+    &.link--social {
       background: transparent;
       color: var(--text-color);
       gap: 1.2rem;
       @include text-body-small;
   
-      .vk-icon {
+      .link__icon {
         width: 2.4rem;
         height: 2.4rem;
       }
@@ -91,4 +90,4 @@
       }
     }
   }
-  
+   

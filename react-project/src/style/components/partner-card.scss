@@ -76,7 +76,17 @@
 
   &__text {
     color: var(--text-color);
+    display: block;
     @include text-body-small-bold;
+  }
+
+  &__clickable {
+    text-decoration: none;
+    color: var(--text-color);
+  
+    &:hover {
+      color: var(--ultramarine-default-color);
+    }
   }
 
   &__socials {

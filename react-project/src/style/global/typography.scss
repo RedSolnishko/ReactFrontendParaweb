@@ -24,6 +24,10 @@ html {
     @include text-button;
 }
 
+.text-button-small {
+    @include text-button-small;
+}
+
 .text-body {
     @include text-body;
 }
