@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SeparatorIcon from "../../assets/svg/dot.svg?react";
+import SeparatorIcon from "../assets/svg/dot.svg?react";
 
 const Breadcrumbs = ({ items, separator = "icon" }) => { // Значение по умолчанию
   return (

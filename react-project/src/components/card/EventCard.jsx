@@ -1,12 +1,12 @@
 import React from "react";
-import Tag from "../tag/Tag";
+import Tag from "../Tag";
 import ClockIcon from "../../assets/svg/clock.svg?react";
 import LocationIcon from "../../assets/svg/location.svg?react";
 import GroupIcon from "../../assets/svg/group.svg?react";
 import AlarmIcon from "../../assets/svg/alarm.svg?react";
 import CoinIcon from "../../assets/svg/coin.svg?react";
 import BookMark from "../../assets/svg/bookmark.svg?react";
-import Button from "../button/Button";
+import Button from "../Button";
 
 /**
  * Компонент карточки события с поддержкой сортировки тегов

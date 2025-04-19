@@ -6,9 +6,10 @@ const PublicLayout = () => {
       <header>
         <nav>
           <ul>
-            <li><Link to="/">Главная</Link></li>
-            <li><Link to="/login">Вход</Link></li>
-            <li><Link to="/uikit">UIKit</Link></li>
+            <li className='text-h3'><Link to="/">Главная</Link></li>
+            <li className='text-h3'><Link to="/login">Вход</Link></li>
+            <li className='text-h3'><Link to="/uikit">UIKit</Link></li>
+            <li className='text-h3'><Link to="/text-content">Текстовый контент</Link></li>
           </ul>
         </nav>
       </header>

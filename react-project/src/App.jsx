@@ -4,6 +4,7 @@ import PublicLayout from './layouts/PublicLayout';
 import PrivateLayout from './layouts/PrivateLayout';
 import NotFound from './layouts/NotFound';
 import UIkit from './layouts/UIkit'; 
+import TextContentPage from './layouts/TextContentPage';
 
 // Демонстрационные компоненты страниц
 const HomePage = () => <div>Главная страница</div>;
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/uikit" element={<UIkit />} />
+        <Route path='/text-content' element={<TextContentPage/>}/>
       </Route>
 
       {/* Приватные маршруты */}

@@ -1,6 +1,6 @@
 import React from "react";
 import CoinIcon from "../../assets/svg/coin.svg?react";
-import Button from "../button/Button";
+import Button from "../Button";
 
 /**
  * Компонент карточки продукта

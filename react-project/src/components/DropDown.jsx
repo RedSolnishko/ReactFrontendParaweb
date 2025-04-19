@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-/**
- * Компонент выпадающего списка (Dropdown)
- * @param {string} type - Тип отображения: 'checkbox' для чекбоксов, 'icon' для иконок, 'text' для текста
- * @param {Array} options - Массив объектов с опциями, содержащий id, label и для типа "checkbox" - checked
- */
 const Dropdown = ({ type, options }) => {
   // Состояние для отслеживания открытости выпадающего списка
   const [isOpen, setIsOpen] = useState(false);

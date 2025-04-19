@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
-// Импортируем SVG-иконки
-import LayoutListIcon from "../../assets/svg/layout-list.svg?react";
-import CalendarIcon from "../../assets/svg/calendar.svg?react";
+import LayoutListIcon from "../assets/svg/layout-list.svg?react";
+import CalendarIcon from "../assets/svg/calendar.svg?react";
 
 const Switcher = () => {
   const [isActive, setIsActive] = useState(false);

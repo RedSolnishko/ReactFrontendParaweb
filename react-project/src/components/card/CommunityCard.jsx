@@ -1,7 +1,7 @@
 import React from "react";
-import Tag from "../tag/Tag";
-import ImagePlaceholder from "../image-placeholder/ImagePlaceholder";
-import Button from "../button/Button";
+import Tag from "../Tag";
+import ImagePlaceholder from "../ImagePlaceholder";
+import Button from "../Button";
 import BookMark from "../../assets/svg/bookmark.svg?react";
 
 /**

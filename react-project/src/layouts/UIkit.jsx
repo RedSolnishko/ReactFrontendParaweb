@@ -1,18 +1,18 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-import PaginationMenu from '../components/pagination/Pagination';
+import PaginationMenu from '../components/Pagination';
 import PaginationIcon from "../assets/svg/pagination/chevron-left.svg?react";
 
-import Button from '../components/button/Button';
-import LinkP from '../components/link/LinkP';
-import Alert from '../components/alert/Alert';
-import Tag from '../components/tag/Tag';
-import Tab from '../components/tab/Tab';
-import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs'; 
-import Dropdown from '../components/dropdown/DropDown';
-import Switcher from '../components/switcher/Switcher';
-import ImagePlaceholder from '../components/image-placeholder/ImagePlaceholder';
+import Button from '../components/Button';
+import LinkP from '../components/LinkP';
+import Alert from '../components/Alert';
+import Tag from '../components/Tag';
+import Tab from '../components/Tab';
+import Breadcrumbs from '../components/Breadcrumbs'; 
+import Dropdown from '../components/DropDown';
+import Switcher from '../components/Switcher';
+import ImagePlaceholder from '../components/ImagePlaceholder';
+
 
 import VkIcon from '../assets/svg/vk.svg?react';
 import Telergram from '../assets/svg/telegram.svg?react';
@@ -21,6 +21,7 @@ import EditIcon from "../assets/svg/edit.svg?react";
 import PlusIcon from "../assets/svg/plus.svg?react";
 import Share  from '../assets/svg/share.svg?react';
 import User from '../assets/svg/user.svg?react'
+
 
 import EventCard from '../components/card/EventCard';
 import CommunityCard from '../components/card/CommunityCard';
@@ -47,7 +48,18 @@ const icon = [
   { id: 3, label: "Скопировать ссылку", icon: <LinkIcon /> },
 ];
 
+const selectOptions = [
+  { id: 1, label: "React" },
+  { id: 2, label: "Vue" },
+  { id: 3, label: "Angular" },
+];
+
 const UIkit = () => {
+  const [phone, setPhone] = useState("");
+  const [birthDate, setBirthDate] = useState(null);
+  const [role, setRole] = useState("");
+  const [interests, setInterests] = useState([]);
+
   return (
     <div className="public-layout">
       <header>
@@ -252,6 +264,9 @@ const UIkit = () => {
                 <Switcher/>
             </li>
           </ul>
+
+
+
 
           <ul className='ImagePlaceholder'>
             <h2 className='text-h2'>ImagePlaceholder</h2>

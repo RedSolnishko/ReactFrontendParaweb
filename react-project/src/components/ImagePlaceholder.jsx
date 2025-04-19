@@ -1,5 +1,5 @@
 import React from "react";
-import PlaceholderIcon from "../../assets/svg/placeholder.svg?react";
+import PlaceholderIcon from "../assets/svg/placeholder.svg?react";
 
 /**
  * Компонент-заглушка для изображений

@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SuccessIcon from "../../assets/svg/check-circle.svg?react"
-import ErrorIcon from "../../assets/svg/alert-circle.svg?react"
-import CloseIcon from "../../assets/svg/x.svg?react"
+import SuccessIcon from "../assets/svg/check-circle.svg?react"
+import ErrorIcon from "../assets/svg/alert-circle.svg?react"
+import CloseIcon from "../assets/svg/x.svg?react"
 
 const Alert = ({ type = "success", title, message, onClose }) => {
   const isSuccess = type === "success";
