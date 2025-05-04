@@ -24,6 +24,7 @@ import './style/components/image-placeholder.scss'
 import './style/components/text-content.scss'
 import './style/components/select-field.scss'
 import './style/components/text-field.scss'
+import './style/components/menu.scss'
 
 import './style/components/event-card.scss'
 import './style/components/community-card.scss'

@@ -25,6 +25,7 @@ import User from '../assets/svg/user.svg?react';
 import Calendar from '../assets/svg/calendar.svg?react';
 import Eye from '../assets/svg/eye.svg?react';
 import ChevronDown from '../assets/svg/chevron-down.svg?react';
+import Group from '../assets/svg/group.svg?react';
 
 import EventCard from '../components/card/EventCard';
 import CommunityCard from '../components/card/CommunityCard';
@@ -32,6 +33,8 @@ import DocumentCard from '../components/card/DocumentCard';
 import ProductCard from '../components/card/ProductCard';
 import PartnerCard from '../components/card/PartnerCard';
 import LevelCard from '../components/card/levelCard';
+
+import Menu from '../components/Menu';
 
 const UIkit = () => {
   const [textName, setTextName] = useState("");
@@ -55,9 +58,9 @@ const UIkit = () => {
             <h2 className='text-h2'> Button</h2>
             <li>
             <Button variant="primary"
-            leftIcon={<EditIcon />} 
-
-            ></Button>
+            leftIcon={<EditIcon />}>
+                Button
+            </Button>
             </li>
 
             <li>
@@ -97,9 +100,6 @@ const UIkit = () => {
 
             <Button variant="user" userIcon={<User />} onClick={() => console.log("User clicked!")} />
 
-          
-
-
             <li>
             <Button 
               variant="default" 
@@ -133,6 +133,14 @@ const UIkit = () => {
               variant="defaultwb" 
               leftIcon={<EditIcon />} >
             </Button>
+            </li>
+
+            <li>
+              <Button
+                variant = "menu"
+                leftIcon = {<Group />}>
+                  Сообщества
+              </Button>
             </li>
           </ul>
         
@@ -468,6 +476,13 @@ const UIkit = () => {
             <li>
             <LevelCard name="asdasdasddadsdasdasdsadsddsdsdsd" icon="src\assets\pics\image.svg" completed={true} cost={100} />
             </li>
+          </ul>
+
+          <ul className='Menu'>
+              <h2 className='text-h2'></h2>
+              <li>
+                <Menu/>
+              </li>
           </ul>
       </main>
     </div>
