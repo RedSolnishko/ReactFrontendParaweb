@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import PaginationMenu from '../components/Pagination';
-import PaginationIcon from "../assets/svg/pagination/chevron-left.svg?react";
+import PaginationIcon from "../assets/svg/chevron-left.svg?react";
 
 import Button from '../components/Button';
 import LinkP from '../components/LinkP';
@@ -34,7 +34,7 @@ import ProductCard from '../components/card/ProductCard';
 import PartnerCard from '../components/card/PartnerCard';
 import LevelCard from '../components/card/levelCard';
 
-import Menu from '../components/Menu';
+
 
 const UIkit = () => {
   const [textName, setTextName] = useState("");
@@ -47,11 +47,6 @@ const UIkit = () => {
 
   return (
     <div className="public-layout">
-      <header>
-        <nav>
-          {/* ... */}
-        </nav>
-      </header>
         <main className="container">
 
           <ul className='Buttons'>
@@ -262,7 +257,7 @@ const UIkit = () => {
                   path: "/events/championship" 
                 }
               ]}
-              disabledItems={[2]} // Индекс последнего элемента (необязательно)
+              disabledItems={[2]} 
                 />
             </li>
           </ul>
@@ -312,62 +307,60 @@ const UIkit = () => {
       rightIcon={<PlusIcon />}
     />
   </li>
-</ul>
+          </ul>
 
-<ul className="Selects">
-  <h2 className="text-h2">SelectField</h2>
+          <ul className="Selects">
+            <h2 className="text-h2">SelectField</h2>
 
-  <li>
-    <SelectField
-      placeholder="Единичный выбор"
-      value={selectSingle}
-      onChange={setSelectSingle}
-      options={[
-        { id: 1, label: "Вариант A" },
-        { id: 2, label: "Вариант B" },
-        { id: 3, label: "Вариант C" }
-      ]}
-      // leftIcon={<Calendar />}
-      rightIcon={<ChevronDown />}
-      helperText="Выберите один"
-    />
-  </li>
+            <li>
+              <SelectField
+                placeholder="Единичный выбор"
+                value={selectSingle}
+                onChange={setSelectSingle}
+                options={[
+                  { id: 1, label: "Вариант A" },
+                  { id: 2, label: "Вариант B" },
+                  { id: 3, label: "Вариант C" }
+                ]}
+                // leftIcon={<Calendar />}
+                rightIcon={<ChevronDown />}
+                helperText="Выберите один"
+              />
+            </li>
 
-  <li>
-    <SelectField
-      placeholder="Множественный выбор"
-      value={selectMulti}
-      onChange={setSelectMulti}
-      isMulti
-      options={[
-        { id: 1, label: "React" },
-        { id: 2, label: "Vue" },
-        { id: 3, label: "Svelte" }
-      ]}
-      leftIcon={<Calendar />}
-      rightIcon={<ChevronDown />}
-      helperText="Вы можете выбрать несколько"
-    />
-  </li>
+            <li>
+              <SelectField
+                placeholder="Множественный выбор"
+                value={selectMulti}
+                onChange={setSelectMulti}
+                isMulti
+                options={[
+                  { id: 1, label: "React" },
+                  { id: 2, label: "Vue" },
+                  { id: 3, label: "Svelte" }
+                ]}
+                leftIcon={<Calendar />}
+                rightIcon={<ChevronDown />}
+                helperText="Вы можете выбрать несколько"
+              />
+            </li>
 
-  <li>
-    <SelectField
-      placeholder="С ошибкой"
-      value={selectError}
-      onChange={setSelectError}
-      options={[
-        { id: 1, label: "Ошибочный вариант" },
-        { id: 2, label: "Неудачный выбор" }
-      ]}
-      leftIcon={<Calendar />}
-      rightIcon={<ChevronDown />}
-      error
-      helperText="Произошла ошибка"
-    />
-  </li>
-</ul>
-
-
+            <li>
+              <SelectField
+                placeholder="С ошибкой"
+                value={selectError}
+                onChange={setSelectError}
+                options={[
+                  { id: 1, label: "Ошибочный вариант" },
+                  { id: 2, label: "Неудачный выбор" }
+                ]}
+                leftIcon={<Calendar />}
+                rightIcon={<ChevronDown />}
+                error
+                helperText="Произошла ошибка"
+              />
+            </li>
+          </ul>
 
           <ul className='ImagePlaceholder'>
             <h2 className='text-h2'>ImagePlaceholder</h2>
@@ -478,12 +471,6 @@ const UIkit = () => {
             </li>
           </ul>
 
-          <ul className='Menu'>
-              <h2 className='text-h2'></h2>
-              <li>
-                <Menu/>
-              </li>
-          </ul>
       </main>
     </div>
   );

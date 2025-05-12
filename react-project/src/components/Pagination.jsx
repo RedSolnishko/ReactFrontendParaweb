@@ -1,5 +1,5 @@
-import React from "react";
-import PaginationIcon from "../assets/svg/pagination/chevron-left.svg?react";
+// import React from "react";
+import PaginationIcon from "../assets/svg/chevron-left.svg?react";
 
 const PaginationMenu = ({ className = ""  }) => {
   return (

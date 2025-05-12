@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './hooks/AuthContext';
 import App from './App';
 import './style/main.scss';
 
@@ -25,6 +26,7 @@ import './style/components/text-content.scss'
 import './style/components/select-field.scss'
 import './style/components/text-field.scss'
 import './style/components/menu.scss'
+import './style/components/private-layout.scss'
 
 import './style/components/event-card.scss'
 import './style/components/community-card.scss'
@@ -34,10 +36,13 @@ import './style/components/partner-card.scss'
 import './style/components/level-card.scss'
 
 import './style/global/base.scss'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

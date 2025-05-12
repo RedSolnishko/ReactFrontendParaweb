@@ -3,40 +3,97 @@
 
 .breadcrumbs {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.2rem;
   padding: 2.4rem 4rem;
   font-family: var(--main-font);
   @include text-body-small;
 
   @include mobile {
     gap: 0.8rem;
+    padding: 0 1.2rem;
+    margin-bottom: 4.8rem;
   }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    @include mobile {
+      gap: 0.8rem;
+    }
+  }
+
   &__item {
     color: var(--text-color);
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
 
-   @include from-mobile{
-    &:hover:not(.disabled) {
-      color: var(--ultramarine-default-color);
-     
+    @include from-mobile {
+      &:hover:not(.disabled) {
+        color: var(--ultramarine-default-color);
+      }
     }
-   }
-   &:active{
-    color: var(--ultramarine-default-color);
-   }
+
+    &:active {
+      color: var(--ultramarine-default-color);
+    }
 
     &.disabled {
-      color: var( --text-secondary-color);
-      cursor: default; 
+      color: var(--text-secondary-color);
+      cursor: default;
     }
   }
 
   &__separator {
-    color: var( --text-secondary-color);
+    color: var(--text-secondary-color);
     margin: 0 4px;
     display: inline-flex;
     align-items: center;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    @include mobile {
+      display: none; // скрываем на мобильной версии
+    }
+  }
+
+  &__action-button {
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary-color);
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--img {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 1.2rem;
+    }
   }
 }

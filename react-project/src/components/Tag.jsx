@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+
 
 /**
  * Компонент тега с разными вариантами (цветовая схема, стили и т.д.),
